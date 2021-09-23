@@ -1,0 +1,49 @@
+﻿@page "/credito-cuotas/{CreditoId}"
+
+@using BlazorApp.Services
+@inject CreditoService CreditoService
+
+<h1>Listado de Créditos</h1>
+
+    <NavLink class="nav-link" href="add-credito">
+        <span class="oi oi-plus" aria-hidden="true">Nuevo Crédito</span>
+    </NavLink>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id Cuota</th>
+                <th>Número Cuota</th>
+                <th>Fecha Cuota</th>
+                <th>Valor</th>
+                <th>Valor Abonado</th>
+                <th>Saldo</th>
+                <th>Fecha Último Abono</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cuota in cuotas)
+            {
+                <tr>
+                <td>@cuota.Id</td>    
+                <td>@cuota.NumeroCuota</td>
+                <td>@cuota.Fecha.ToShortDateString()</td>
+                <td>@cuota.ValorCuota.ToString("c2")</td>
+                <td>@cuota.Abonado.ToString("c2")</td>
+                <td>@cuota.Saldo.ToString("c2")</td>
+                <td>@cuota.FechaUltimoAbono.ToShortDateString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+@code {
+   [Parameter]
+   public string CreditoId { get; set; }
+   private Cuota[] cuotas;
+   
+   protected override async Task OnInitializedAsync()
+   {
+        cuotas = await CreditoService.GetCuotasAsync(Convert.ToInt32(CreditoId));
+   }
+}
