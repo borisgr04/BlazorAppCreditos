@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "12c16653-8455-41f9-84d0-a3894a8cc490": {
+      "ProjectGuid": "12c16653-8455-41f9-84d0-a3894a8cc490",
+      "DisplayName": "BlazorApp",
+      "ColorIndex": 0
+    },
+    "c5d3831a-f2d9-4a09-9946-4ef9fc4dd1a6": {
+      "ProjectGuid": "c5d3831a-f2d9-4a09-9946-4ef9fc4dd1a6",
+      "DisplayName": "CreditosTest",
+      "ColorIndex": 1
+    },
+    "3a206714-f546-44c8-ae1d-000e80adb04d": {
+      "ProjectGuid": "3a206714-f546-44c8-ae1d-000e80adb04d",
+      "DisplayName": "BlazorApp",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}
