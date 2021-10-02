@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\RepoUpc\\BlazorApp\\CreditosWeb\\CreditosWeb.csproj",
+      "projectUniqueName": "D:\\RepoUpc\\BlazorAppClase\\BlazorAppCreditos\\CreditosWeb\\CreditosWeb.csproj",
       "projectName": "CreditosWeb",
-      "projectPath": "D:\\RepoUpc\\BlazorApp\\CreditosWeb\\CreditosWeb.csproj",
+      "projectPath": "D:\\RepoUpc\\BlazorAppClase\\BlazorAppCreditos\\CreditosWeb\\CreditosWeb.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\RepoUpc\\BlazorApp\\CreditosWeb\\obj\\",
+      "outputPath": "D:\\RepoUpc\\BlazorAppClase\\BlazorAppCreditos\\CreditosWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

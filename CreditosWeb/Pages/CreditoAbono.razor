@@ -17,8 +17,8 @@
    
    private async Task AddAbono()
    {
-        var result=await CreditoService.InsertAbonoAsync(Convert.ToInt32(CreditoId),DateTime.Now, valor);
-         NavigationManager.NavigateTo("Creditos");
+        await CreditoService.InsertAbonoAsync(Convert.ToInt32(CreditoId),DateTime.Now, valor);
+        NavigationManager.NavigateTo("Creditos");
    }
 
 }

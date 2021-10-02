@@ -1,18 +1,16 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CreditosWeb.Services
 {
     public class Credito
     {
-        
-        public Credito(){ }
 
-        public Credito(int id, DateTime fecha, int numeroCuotas,  decimal valorCredito)
+        public Credito() { }
+
+        public Credito(int id, DateTime fecha, int numeroCuotas, decimal valorCredito)
         {
-            Id = id;   
+            Id = id;
             Fecha = fecha;
             NumeroCuotas = numeroCuotas;
             ValorCredito = valorCredito;
@@ -22,8 +20,8 @@ namespace CreditosWeb.Services
                 fecha = fecha.AddMonths(1);
                 var cuota = new Cuota()
                 {
-                    CreditoId=Id, 
-                    NumeroCuota = i+1,
+                    CreditoId = Id,
+                    NumeroCuota = i + 1,
                     Fecha = fecha,
                     ValorCuota = ValorCredito / NumeroCuotas
                 };
@@ -32,6 +30,9 @@ namespace CreditosWeb.Services
         }
 
         public int Id { get; set; }
+
+
+
         public DateTime Fecha { get; set; }
         public int NumeroCuotas { get; set; }
         public decimal ValorCredito { get; set; }
@@ -39,15 +40,33 @@ namespace CreditosWeb.Services
         public decimal Saldo => ValorCredito - ValorAbonos;
         public List<Cuota> Cuotas { get; set; } = new List<Cuota>();
 
-        public string Abonar(DateTime fechaAbono, decimal valorAbono) 
+        public void Abonar(decimal valorAbono, DateTime fechaAbono)
         {
+            if (valorAbono < 0)
+            {
+                return;
+            }
+
             ValorAbonos += valorAbono;
-            return $"saldo nuevo es $$";
-            //throw new NotImplementedException();
+            var valorAbonoPorAplicar = valorAbono;
+            foreach (var cuota in Cuotas)
+            {
+                if (cuota.Saldo > 0)
+                {
+                    var valorAplicado = cuota.Abonar(valorAbonoPorAplicar, fechaAbono);
+                    valorAbonoPorAplicar -= valorAplicado;
+                }
+                if (valorAbonoPorAplicar == 0)
+                {
+                    break;
+                }
+            }
+
+
+
         }
     }
 
-  
 
 
 }

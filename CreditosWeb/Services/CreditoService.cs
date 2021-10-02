@@ -25,11 +25,11 @@ namespace CreditosWeb.Services
             return Task.FromResult(credito.Cuotas.ToArray());
         }
 
-        public Task<string> InsertAbonoAsync(int creditoId, DateTime fechaAbono, decimal valorAbono)
+        public Task InsertAbonoAsync(int creditoId, DateTime fechaAbono, decimal valorAbono)
         {
             var credito= CreditosRepository.FirstOrDefault(t=>t.Id==creditoId);
-            var saldo=credito.Abonar(fechaAbono, valorAbono);
-            return Task.FromResult(saldo);
+            credito.Abonar(valorAbono, fechaAbono);
+            return Task.CompletedTask;
         }
     }
 }

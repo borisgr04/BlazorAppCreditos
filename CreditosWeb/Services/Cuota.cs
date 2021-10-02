@@ -12,8 +12,23 @@ namespace CreditosWeb.Services
         public int NumeroCuota { get; set; }
         public DateTime Fecha { get; set; }
         public decimal ValorCuota { get; set; }
-        public decimal Abonado { get; set; }
-        public DateTime FechaUltimoAbono { get; set; }
+        public decimal Abonado { get; private set; }
+        public DateTime FechaUltimoAbono { get; private set; }
         public decimal Saldo => ValorCuota - Abonado;
+
+        internal decimal Abonar(decimal valorPorAplicar, DateTime fechaAbono)
+        {
+            if (Saldo >= valorPorAplicar)
+            {
+                Abonado += valorPorAplicar;
+            }
+            else
+            {
+                valorPorAplicar = Saldo;
+                Abonado += Saldo;
+            }
+            FechaUltimoAbono = fechaAbono;
+            return valorPorAplicar;
+        }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AVhnl8J8l54uSamSQ9KpDtVfIvnvfLc+cdL/5+hDoUBDx+U/VkHwhjmVTyth5Ddm+Iqopl6bYEU/zCS9luqrZA==",
+  "dgSpecHash": "8S1outazvg1XhHO3lsHV2JkdjZoPFqRUNbxJ+zJoLR+jPnYNWVsq7rU5S8M6O1RPdQmXVsRQd4plKKDlBvJO7Q==",
   "success": true,
-  "projectFilePath": "D:\\RepoUpc\\BlazorApp\\CreditosTest\\CreditosTest.csproj",
+  "projectFilePath": "D:\\RepoUpc\\BlazorAppClase\\BlazorAppCreditos\\CreditosTest\\CreditosTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\coverlet.collector\\3.0.3\\coverlet.collector.3.0.3.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.codecoverage\\16.10.0\\microsoft.codecoverage.16.10.0.nupkg.sha512",

@@ -3879,11 +3879,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\RepoUpc\\BlazorApp\\CreditosTest\\CreditosTest.csproj",
+      "projectUniqueName": "D:\\RepoUpc\\BlazorAppClase\\BlazorAppCreditos\\CreditosTest\\CreditosTest.csproj",
       "projectName": "CreditosTest",
-      "projectPath": "D:\\RepoUpc\\BlazorApp\\CreditosTest\\CreditosTest.csproj",
+      "projectPath": "D:\\RepoUpc\\BlazorAppClase\\BlazorAppCreditos\\CreditosTest\\CreditosTest.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\RepoUpc\\BlazorApp\\CreditosTest\\obj\\",
+      "outputPath": "D:\\RepoUpc\\BlazorAppClase\\BlazorAppCreditos\\CreditosTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3901,8 +3901,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\RepoUpc\\BlazorApp\\CreditosWeb\\CreditosWeb.csproj": {
-              "projectPath": "D:\\RepoUpc\\BlazorApp\\CreditosWeb\\CreditosWeb.csproj"
+            "D:\\RepoUpc\\BlazorAppClase\\BlazorAppCreditos\\CreditosWeb\\CreditosWeb.csproj": {
+              "projectPath": "D:\\RepoUpc\\BlazorAppClase\\BlazorAppCreditos\\CreditosWeb\\CreditosWeb.csproj"
             }
           }
         }
