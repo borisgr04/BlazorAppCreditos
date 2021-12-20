@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31423.177
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreditosTest", "CreditosTest\CreditosTest.csproj", "{208E6961-C70F-409A-AD55-E3C96645A2B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreditosWeb", "CreditosWeb\CreditosWeb.csproj", "{52153360-53A2-46F6-8ED6-ED8C92D8A24A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreditosWeb", "CreditosWeb\CreditosWeb.csproj", "{52153360-53A2-46F6-8ED6-ED8C92D8A24A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

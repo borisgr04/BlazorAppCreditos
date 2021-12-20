@@ -2,27 +2,31 @@
 
 @using CreditosWeb.Services
 @inject CreditoService CreditoService
+@inject NavigationManager NavigationManager
 
 <h1>Listado de Créditos</h1>
+@DateTime.Now
+<NavLink class="nav-link" href="add-credito">
+    <span class="oi oi-plus" aria-hidden="true">Nuevo Crédito</span>
+</NavLink>
 
-    <NavLink class="nav-link" href="add-credito">
-        <span class="oi oi-plus" aria-hidden="true">Nuevo Crédito</span>
-    </NavLink>
+<RadzenButton Text="@text"></RadzenButton>
+<RadzenButton Click="@ButtonClickedAsync" Text="Consultar"></RadzenButton>
 
-    <table class="table">
-        <thead>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id Crédito</th>
+            <th>Fecha</th>
+            <th>Valor</th>
+            <th>Saldo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var credito in creditos)
+        {
             <tr>
-                <th>Id Crédito</th>
-                <th>Fecha</th>
-                <th>Valor</th>
-                <th>Saldo</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var credito in creditos)
-            {
-                <tr>
-                <td>@credito.Id</td>    
+                <td>@credito.Id</td>
                 <td>@credito.Fecha.ToShortDateString()</td>
                 <td>@credito.ValorCredito.ToString("c2")</td>
                 <td>@credito.Saldo.ToString("c2")</td>
@@ -31,22 +35,40 @@
                         <span class="oi oi-plus" aria-hidden="true">Nuevo Abono</span>
                     </a>
                 </td>
-                    <td>
+                <td>
                     <a class="nav-link" href="credito-cuotas/@credito.Id">
                         <span class="oi oi-eye" aria-hidden="true">Ver Cuotas</span>
                     </a>
                 </td>
-                </tr>
+            </tr>
 
-            }
-        </tbody>
-    </table>
+        }
+    </tbody>
+</table>
+
+<RadzenDataGrid AllowFiltering="true" AllowColumnResize="true" FilterMode="FilterMode.Advanced" PageSize="5" AllowPaging="true" AllowSorting="true"
+                Data="@creditosE" TItem="Credito" ColumnWidth="300px" LogicalFilterOperator="LogicalFilterOperator.Or">
+    <Columns>
+        <RadzenDataGridColumn TItem="Credito" Property="Id" Filterable="false" Title="ID" Frozen="true" Width="70px" TextAlign="TextAlign.Center" />
+        <RadzenDataGridColumn TItem="Credito" Property="Fecha" Title="Fecha" FormatString="{0:d}" />
+        <RadzenDataGridColumn TItem="Credito" Property="ValorCredito" Title="ValorCredito" FormatString="{0:c2}" />
+        <RadzenDataGridColumn TItem="Credito" Property="Saldo" Title="Saldo" FormatString="{0:c2}" />
+    </Columns>
+</RadzenDataGrid>
+
 
 @code {
     private Credito[] creditos;
-   
-   protected override async Task OnInitializedAsync()
-   {
+    private IEnumerable<Credito> creditosE;
+    string text = "Hi";
+
+    protected override async Task OnInitializedAsync()
+    {
         creditos = await CreditoService.GetCreditosAsync();
-   }
+    }
+    protected async Task ButtonClickedAsync()
+    {
+        creditosE = await CreditoService.GetCreditosAsync();
+        NavigationManager.NavigateTo("creditos");
+    }
 }

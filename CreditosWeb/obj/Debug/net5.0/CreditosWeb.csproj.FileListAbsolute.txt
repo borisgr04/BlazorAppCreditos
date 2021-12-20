@@ -117,3 +117,7 @@ D:\RepoUpc\BlazorAppClase\BlazorAppCreditos\CreditosWeb\obj\Debug\net5.0\ref\Cre
 D:\RepoUpc\BlazorAppClase\BlazorAppCreditos\CreditosWeb\obj\Debug\net5.0\CreditosWeb.pdb
 D:\RepoUpc\BlazorAppClase\BlazorAppCreditos\CreditosWeb\obj\Debug\net5.0\CreditosWeb.genruntimeconfig.cache
 D:\RepoUpc\BlazorAppClase\BlazorAppCreditos\CreditosWeb\obj\Debug\net5.0\CreditosWeb.csproj.CopyComplete
+D:\RepoUpc\BlazorAppClase\BlazorAppCreditos\CreditosWeb\bin\Debug\net5.0\Radzen.Blazor.dll
+D:\RepoUpc\BlazorAppClase\BlazorAppCreditos\CreditosWeb\bin\Debug\net5.0\System.Linq.Dynamic.Core.dll
+D:\RepoUpc\BlazorAppClase\BlazorAppCreditos\CreditosWeb\obj\Debug\net5.0\RazorDeclaration\Pages\Graficos.razor.g.cs
+D:\RepoUpc\BlazorAppClase\BlazorAppCreditos\CreditosWeb\obj\Debug\net5.0\Razor\Pages\Graficos.razor.g.cs

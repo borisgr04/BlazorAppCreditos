@@ -83,6 +83,20 @@ using CreditosWeb.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 11 "D:\RepoUpc\BlazorAppClase\BlazorAppCreditos\CreditosWeb\_Imports.razor"
+using Radzen;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "D:\RepoUpc\BlazorAppClase\BlazorAppCreditos\CreditosWeb\_Imports.razor"
+using Radzen.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 3 "D:\RepoUpc\BlazorAppClase\BlazorAppCreditos\CreditosWeb\Pages\Creditos.razor"
 using CreditosWeb.Services;
 
@@ -98,18 +112,26 @@ using CreditosWeb.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 45 "D:\RepoUpc\BlazorAppClase\BlazorAppCreditos\CreditosWeb\Pages\Creditos.razor"
+#line 60 "D:\RepoUpc\BlazorAppClase\BlazorAppCreditos\CreditosWeb\Pages\Creditos.razor"
        
     private Credito[] creditos;
-   
-   protected override async Task OnInitializedAsync()
-   {
+    private IEnumerable<Credito> creditosE;
+    string text = "Hi";
+
+    protected override async Task OnInitializedAsync()
+    {
         creditos = await CreditoService.GetCreditosAsync();
-   }
+    }
+    protected async Task ButtonClickedAsync()
+    {
+        creditosE = await CreditoService.GetCreditosAsync();
+        NavigationManager.NavigateTo("creditos");
+    }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private CreditoService CreditoService { get; set; }
     }
 }

@@ -83,6 +83,20 @@ using CreditosWeb.Shared;
 #line hidden
 #nullable disable
 #nullable restore
+#line 11 "D:\RepoUpc\BlazorAppClase\BlazorAppCreditos\CreditosWeb\_Imports.razor"
+using Radzen;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "D:\RepoUpc\BlazorAppClase\BlazorAppCreditos\CreditosWeb\_Imports.razor"
+using Radzen.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 3 "D:\RepoUpc\BlazorAppClase\BlazorAppCreditos\CreditosWeb\Pages\CreditoCuotas.razor"
 using CreditosWeb.Services;
 
