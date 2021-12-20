@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d7YY33gat8wOOditoBo4Ec1qR9L8lywpBZ5O4I9RKSR+P5f0XuCkU5LraZaGC0Wg0vIw8vY+WReUfPEAPSN+/A==",
+  "dgSpecHash": "XSFgTIjvplLTntjcmbCxSX8zeJrVfUuY4IggEw2oTK6ZfP0z1a/xQ/Ye21iGvh7ZHXiMWUYs4YzxBdryoHsPXw==",
   "success": true,
   "projectFilePath": "D:\\RepoUpc\\BlazorAppClase\\BlazorAppCreditos\\CreditosWeb\\CreditosWeb.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.9\\microsoft.netcore.app.host.win-x64.5.0.9.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

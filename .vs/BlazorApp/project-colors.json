@@ -20,7 +20,17 @@
       "ProjectGuid": "3a206714-f546-44c8-ae1d-000e80adb04d",
       "DisplayName": "BlazorApp",
       "ColorIndex": 2
+    },
+    "208e6961-c70f-409a-ad55-e3c96645a2b1": {
+      "ProjectGuid": "208e6961-c70f-409a-ad55-e3c96645a2b1",
+      "DisplayName": "CreditosTest",
+      "ColorIndex": 3
+    },
+    "52153360-53a2-46f6-8ed6-ed8c92d8a24a": {
+      "ProjectGuid": "52153360-53a2-46f6-8ed6-ed8c92d8a24a",
+      "DisplayName": "CreditosWeb",
+      "ColorIndex": 4
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 5
 }
